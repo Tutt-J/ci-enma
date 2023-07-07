@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+        <h1>Vous êtes connecté</h1>
+        <a href="{{path("app_logout")}}">Se déconnecter</a>
+    {% else %}
+        <h1>Vous êtes déconnecté</h1>
+        <a href="{{path("app_login")}}">Se connecter</a>
+    {% endif %}
+{% endblock %}
